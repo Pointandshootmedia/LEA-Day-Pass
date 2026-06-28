@@ -331,8 +331,28 @@ select:focus {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   gap: 12px;
   padding-top: 14px;
+}
+
+.membership-link {
+  min-height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid rgba(212, 175, 55, 0.68);
+  border-radius: 4px;
+  color: #fff;
+  background: rgba(12, 12, 12, 0.72);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.membership-link:hover {
+  color: #141414;
+  background: var(--gold);
 }
 
 [hidden] {
@@ -457,6 +477,11 @@ select:focus {
   }
 
   .secondary-action {
+    min-height: 46px;
+    width: 100%;
+  }
+
+  .membership-link {
     min-height: 46px;
     width: 100%;
   }
