@@ -19,13 +19,15 @@ The recommended backend is Google Apps Script connected to Google Sheets.
 1. Create a Google Sheet named `Lake Erie Arms Day Pass Leads`.
 2. In the sheet, go to Extensions -> Apps Script.
 3. Replace the starter code with `google-apps-script/Code.gs` from this repo.
-4. Save the Apps Script project.
-5. Click Deploy -> New deployment.
-6. Choose type: Web app.
-7. Execute as: Me.
-8. Who has access: Anyone.
-9. Deploy and authorize the script.
-10. Copy the Web app URL.
+4. Copy the Google Sheet ID from the sheet URL and paste it into `SPREADSHEET_ID`.
+   The ID is the long value between `/d/` and `/edit`.
+5. Save the Apps Script project.
+6. Click Deploy -> New deployment.
+7. Choose type: Web app.
+8. Execute as: Me.
+9. Who has access: Anyone.
+10. Deploy and authorize the script.
+11. Copy the Web app URL.
 
 Do not put private API keys in this GitHub Pages site. Anything in this folder is
 public once hosted.
