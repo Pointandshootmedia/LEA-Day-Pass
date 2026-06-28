@@ -1,5 +1,5 @@
 const CONFIG = {
-  submissionEndpoint: "https://script.google.com/macros/s/AKfycbwd2_2PZtqaJupLJFWQ4Pg4UZ5IAy2tw8d3_O1Kg7STiLiaNGwbOkUlnPr4TzlpRdI1Jg/exec",
+  submissionEndpoint: "https://script.google.com/macros/s/AKfycbyDch5785lqyh1m71dCwPZNZlvbl8SIYxg1RJdSLQSSJRmaXKTQjX6BeboavDbGM4cojg/exec",
   businessName: "Lake Erie Arms",
 };
 
