@@ -10,6 +10,7 @@ const formError = document.querySelector("#formError");
 const passGuest = document.querySelector("#passGuest");
 const passDate = document.querySelector("#passDate");
 const passNumber = document.querySelector("#passNumber");
+const passAccess = document.querySelector("#passAccess");
 const verifyCode = document.querySelector("#verifyCode");
 const dailyBadge = document.querySelector("#dailyBadge");
 const qrCode = document.querySelector("#qrCode");
@@ -100,6 +101,7 @@ function showPass(payload) {
   passGuest.textContent = `${payload.firstName} ${payload.lastName}`;
   passDate.textContent = formatDate(new Date(payload.createdAt));
   passNumber.textContent = payload.passNumber;
+  passAccess.textContent = payload.visitType;
   verifyCode.textContent = payload.verifyCode;
   dailyBadge.style.background = payload.dailyColor;
   setCodePattern(payload.verifyCode);

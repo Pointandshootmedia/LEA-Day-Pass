@@ -12,13 +12,20 @@ Static GitHub Pages site for restaurant day passes.
 The site works without a backend while testing. If `submissionEndpoint` is empty
 in `script.js`, submissions are saved only in the browser's `localStorage`.
 
-## Recommended backend
+## Google Sheets backend
 
-Use one of these for the first version:
+The recommended backend is Google Apps Script connected to Google Sheets.
 
-- Google Apps Script connected to Google Sheets
-- Microsoft Forms connected to Excel Online
-- Formspree, Basin, Tally, Airtable, Zapier, or Make
+1. Create a Google Sheet named `Lake Erie Arms Day Pass Leads`.
+2. In the sheet, go to Extensions -> Apps Script.
+3. Replace the starter code with `google-apps-script/Code.gs` from this repo.
+4. Save the Apps Script project.
+5. Click Deploy -> New deployment.
+6. Choose type: Web app.
+7. Execute as: Me.
+8. Who has access: Anyone.
+9. Deploy and authorize the script.
+10. Copy the Web app URL.
 
 Do not put private API keys in this GitHub Pages site. Anything in this folder is
 public once hosted.
@@ -29,7 +36,7 @@ Edit `script.js`:
 
 ```js
 const CONFIG = {
-  submissionEndpoint: "https://your-form-endpoint.example.com",
+  submissionEndpoint: "https://script.google.com/macros/s/YOUR_DEPLOYMENT_ID/exec",
   businessName: "Lake Erie Arms",
 };
 ```
