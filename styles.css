@@ -40,28 +40,11 @@ select {
   font: inherit;
 }
 
-.page-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  width: 100%;
-  padding: 24px clamp(18px, 4vw, 56px);
-  pointer-events: none;
-}
-
-.site-logo {
-  display: block;
-  width: clamp(210px, 23vw, 370px);
-  height: auto;
-  filter: drop-shadow(0 12px 26px rgba(0, 0, 0, 0.7));
-}
-
 .app-shell {
   width: min(100%, 1180px);
   min-height: 100vh;
   margin: 0 auto;
-  padding: 120px 32px 32px;
+  padding: 32px;
   display: grid;
   grid-template-columns: minmax(340px, 0.86fr) minmax(420px, 0.74fr);
   gap: clamp(24px, 4vw, 58px);
@@ -289,13 +272,11 @@ select:focus {
   background: var(--surface);
 }
 
-.daily-badge {
-  width: 58px;
-  height: 58px;
+.pass-mark {
+  width: 64px;
+  height: auto;
   flex: 0 0 auto;
-  border: 3px solid rgba(255, 255, 255, 0.86);
-  border-radius: 50%;
-  background: var(--gold);
+  filter: brightness(0) invert(1);
 }
 
 .pass-guest {
@@ -346,49 +327,10 @@ select:focus {
   font-size: 1rem;
 }
 
-.verify-strip {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  padding: 18px;
-  background: var(--paper);
-}
-
-.qr-code {
-  width: 86px;
-  height: 86px;
-  flex: 0 0 auto;
-  border: 8px solid #fff;
-  background: conic-gradient(
-    from 90deg,
-    #111 0 25%,
-    #fff 0 50%,
-    #111 0 75%,
-    #fff 0
-  );
-  box-shadow: inset 0 0 0 2px #111;
-}
-
-.verify-label {
-  margin: 0 0 4px;
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.verify-code {
-  margin: 0;
-  font-size: 2rem;
-  font-weight: 900;
-  letter-spacing: 0.08em;
-}
-
 .pass-actions {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 12px;
   padding-top: 14px;
 }
@@ -405,7 +347,7 @@ select:focus {
   .app-shell {
     grid-template-columns: 1fr;
     align-items: stretch;
-    padding: 120px 14px 14px;
+    padding: 14px;
     gap: 10px;
   }
 
@@ -419,10 +361,6 @@ select:focus {
   .club-lockup {
     align-items: center;
     width: 100%;
-  }
-
-  .site-logo {
-    width: min(300px, 74vw);
   }
 
   .club-bullet {
@@ -447,6 +385,15 @@ select:focus {
   .pass-panel {
     padding: 18px;
   }
+
+  body.showing-pass .app-shell {
+    min-height: 100svh;
+    align-content: center;
+  }
+
+  body.showing-pass .brand-panel {
+    display: none;
+  }
 }
 
 @media (max-width: 520px) {
@@ -466,8 +413,51 @@ select:focus {
     border-bottom: 0;
   }
 
-  .pass-guest strong,
-  .verify-code {
+  .pass-panel {
+    padding: 12px;
+  }
+
+  body.showing-pass .app-shell {
+    padding: 12px;
+  }
+
+  .pass-topline {
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .pass-topline h2 {
+    font-size: 1.28rem;
+  }
+
+  .pass-mark {
+    width: 50px;
+  }
+
+  .pass-guest {
+    padding: 16px;
+  }
+
+  .pass-guest strong {
     font-size: 1.65rem;
+  }
+
+  .pass-details div {
+    min-height: 66px;
+    padding: 13px 16px;
+  }
+
+  .pass-details span {
+    margin-bottom: 3px;
+    font-size: 0.7rem;
+  }
+
+  .pass-actions {
+    padding-top: 10px;
+  }
+
+  .secondary-action {
+    min-height: 46px;
+    width: 100%;
   }
 }

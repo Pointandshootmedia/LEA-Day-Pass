@@ -17,10 +17,6 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header class="page-header" aria-label="Lake Erie Arms">
-      <img class="site-logo" src="images/logo.png" alt="Lake Erie Arms">
-    </header>
-
     <main class="app-shell">
       <section class="brand-panel" aria-label="Caliber Club Day Pass">
         <div class="club-lockup">
@@ -140,7 +136,7 @@
               <p class="eyebrow">Valid Today</p>
               <h2 id="passTitle">Caliber Club Day Pass</h2>
             </div>
-            <div id="dailyBadge" class="daily-badge" aria-label="Daily color code"></div>
+            <img class="pass-mark" src="images/CC-Bullet.png" alt="">
           </div>
 
           <div class="pass-guest">
@@ -166,22 +162,11 @@
               <strong>End of day</strong>
             </div>
           </div>
-
-          <div class="verify-strip">
-            <div id="qrCode" class="qr-code" aria-label="Verification code"></div>
-            <div>
-              <p class="verify-label">Staff Verification</p>
-              <p id="verifyCode" class="verify-code">000000</p>
-            </div>
-          </div>
         </div>
 
         <div class="pass-actions">
           <button id="savePassButton" class="secondary-action" type="button">
             Save Screenshot
-          </button>
-          <button id="newPassButton" class="text-action" type="button">
-            New guest
           </button>
         </div>
       </section>
